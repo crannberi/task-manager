@@ -20,9 +20,9 @@ class DepartmentFactory extends Factory
     {
 
         return [
-            'id' => fake()->id(),
-            'name' => fake()->jobTitle(),
-            'description'=> $this->faker->sentence(),
+        //     'id' => fake()->id(),
+        //     'name' => fake()->jobTitle(),
+        //     'description'=> $this->faker->sentence(),
         ];
     }
 }
