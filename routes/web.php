@@ -1,23 +1,36 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Department;
 
 Route::get('/', function () {
-    return view('welcome');
+    // $departments = Department::all();
+
+    // dd($departments);
+
+    return view('home');
 });
 
-Route::get('/departments', function () {
-    return view('departments');
+Route::get('/department', function () {
+    return view('department', [
+        'departments' => Department::all()
+    ]);
 });
 
-Route::get('/users', function () {
-    return view('welcome');
+Route::get('/department/{id}', function ($id) {
+    $department = Department::find($id);
+
+    return view('department', ['department' => $department]);
 });
 
-Route::get('/projects', function () {
-    return view('welcome');
+Route::get('/user', function () {
+    return view('/user');
 });
 
-Route::get('/tasks', function () {
-    return view('welcome');
+Route::get('/project', function () {
+    return view('project');
+});
+
+Route::get('/task', function () {
+    return view('task');
 });

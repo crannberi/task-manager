@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Department;
 use App\Http\Requests\StoreDepartmentRequest;
 use App\Http\Requests\UpdateDepartmentRequest;
+use Illuminate\View;
+Use Illuminate\Support\Facades\DB;
 
 class DepartmentController extends Controller
 {
@@ -13,7 +15,8 @@ class DepartmentController extends Controller
      */
     public function index()
     {
-        //
+        $departments = Department::paginate(3);
+        return view('departments.index', compact('departments'));
     }
 
     /**
