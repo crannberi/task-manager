@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('tasks', function (Blueprint $table) {
-            $table->id('task_id'); // PK
+            $table->id(); // PK
             $table->string('title');
             $table->enum('status', ['pending', 'in_progress', 'completed', 'canceled'])->default('pending');
             $table->timestamp('creation_date')->useCurrent();

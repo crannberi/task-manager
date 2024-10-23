@@ -15,8 +15,9 @@ class DepartmentController extends Controller
      */
     public function index()
     {
-        $departments = Department::paginate(3);
-        return view('departments.index', compact('departments'));
+        $departments = Department::simplePaginate(3);
+        return view('department.index', compact('departments'));
+        // return view('Department.index', ['department' => $department]);
     }
 
     /**
@@ -38,9 +39,11 @@ class DepartmentController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Department $department)
+    public function show($id)
     {
-        //
+        $department = Department::findorFail($id);
+        return view('department.show', ['department' => $department]);
+ 
     }
 
     /**

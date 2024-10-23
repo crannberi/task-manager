@@ -13,7 +13,9 @@ class TaskController extends Controller
      */
     public function index()
     {
-        //
+        $tasks = Task::paginate(3);
+        return view('task.index', compact('tasks'));
+        // return view('Task.index', ['task' => $task]);
     }
 
     /**
@@ -37,7 +39,8 @@ class TaskController extends Controller
      */
     public function show(Task $task)
     {
-        //
+        $tasks = task::paginate(4);
+        return view('task.index', compact('tasks'));
     }
 
     /**

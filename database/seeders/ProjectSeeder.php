@@ -18,7 +18,7 @@ class ProjectSeeder extends Seeder
             [
                 'name' => 'Website Redesign',
                 'status' => 'in_progress',
-                'creation_date' => now(),
+                'deadline' => now()->addDays(45),
                 'created_at' => now(),
                 'updated_at' => now(),
                 'department_id' => 2, 
@@ -26,7 +26,7 @@ class ProjectSeeder extends Seeder
             [
                 'name' => 'Marketing Campaign',
                 'status' => 'pending',
-                'creation_date' => now(),
+                'deadline' => now()->addDays(45),
                 'created_at' => now(),
                 'updated_at' => now(),
                 'department_id' => 4, 
@@ -34,7 +34,7 @@ class ProjectSeeder extends Seeder
             [
                 'name' => 'Remodeling Website',
                 'status' => 'completed',
-                'creation_date' => now()->subMonths(2),
+                'deadline' => now()->addDays(24),
                 'created_at' => now()->subMonths(2),
                 'updated_at' => now()->subMonth(), 
                 'department_id' => 2, 
@@ -42,7 +42,7 @@ class ProjectSeeder extends Seeder
             [
                 'name' => 'Employee Training Program',
                 'status' => 'canceled',
-                'creation_date' => now()->subWeeks(3),
+                'deadline' => now()->addDays(21),
                 'created_at' => now()->subWeeks(3),
                 'updated_at' => now()->subDays(10), 
                 'department_id' => 1, 
@@ -51,7 +51,7 @@ class ProjectSeeder extends Seeder
             [
                 'name' => 'Customer Support Enhancement',
                 'status' => 'in_progress',
-                'creation_date' => now(),
+                'deadline' => now()->addDays(50),
                 'created_at' => now(),
                 'updated_at' => now(),
                 'department_id' => 1,
@@ -59,7 +59,7 @@ class ProjectSeeder extends Seeder
             [
                 'name' => 'Mobile App Launch',
                 'status' => 'pending',
-                'creation_date' => now(),
+                'deadline' => now()->addDays(87),
                 'created_at' => now(),
                 'updated_at' => now(),
                 'department_id' => 2,
@@ -67,7 +67,7 @@ class ProjectSeeder extends Seeder
             [
                 'name' => 'Q4 Financial Planning',
                 'status' => 'completed',
-                'creation_date' => now()->subMonths(1),
+                'deadline' => now()->addDays(45),
                 'created_at' => now()->subMonths(1),
                 'updated_at' => now()->subWeeks(2),
                 'department_id' => 5,
@@ -75,7 +75,7 @@ class ProjectSeeder extends Seeder
             [
                 'name' => 'Company Rebranding',
                 'status' => 'in_progress',
-                'creation_date' => now()->subWeeks(2),
+                'deadline' => now()->addDays(78),
                 'created_at' => now()->subWeeks(2),
                 'updated_at' => now()->subDays(5),
                 'department_id' => 5,
@@ -83,7 +83,7 @@ class ProjectSeeder extends Seeder
             [
                 'name' => 'New HR Software Integration',
                 'status' => 'pending',
-                'creation_date' => now(),
+                'deadline' => now()->addDays(40),
                 'created_at' => now(),
                 'updated_at' => now(),
                 'department_id' => 2,
@@ -91,7 +91,7 @@ class ProjectSeeder extends Seeder
             [
                 'name' => 'Security System Upgrade',
                 'status' => 'in_progress',
-                'creation_date' => now()->subDays(4),
+                'deadline' => now()->addDays(50),
                 'created_at' => now()->subDays(4),
                 'updated_at' => now(),
                 'department_id' => 2,
@@ -99,7 +99,7 @@ class ProjectSeeder extends Seeder
             [
                 'name' => 'Sales Growth Strategy',
                 'status' => 'completed',
-                'creation_date' => now()->subMonths(3),
+                'deadline' => now()->addDays(99),
                 'created_at' => now()->subMonths(3),
                 'updated_at' => now()->subMonths(2),
                 'department_id' => 4,
@@ -107,7 +107,7 @@ class ProjectSeeder extends Seeder
             [
                 'name' => 'Data Backup & Recovery Plan',
                 'status' => 'in_progress',
-                'creation_date' => now()->subDays(10),
+                'deadline' => now()->addDays(50),
                 'created_at' => now()->subDays(10),
                 'updated_at' => now(),
                 'department_id' => 2,
